@@ -1,0 +1,62 @@
+.container {
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: 90%;
+}
+
+.dataForm {
+  display: flex;
+  width: 98%;
+}
+
+.col-md-6 {
+  flex: 1;
+  border: 1px dashed #ddd;
+  margin: 12px;
+}
+
+.form-item {
+  width: 100%;
+  line-height: 32px;
+}
+
+.form-item>label {
+  display: flex;
+}
+
+.form-item>label span {
+  width: 80px;
+}
+
+.form-item>label input {
+  flex: 1;
+}
+
+input.error {
+  border: 1px solid red;
+}
+
+.button {
+  margin: 20px;
+}
+
+.preview-result {
+  margin: 0 auto;
+  width: 768px;
+  border: 1px dashed #aaa;
+}
+
+.errorInfo {
+  padding: 12px;
+}
+
+.preview {
+  margin: 20px;
+}
+
+.preview>textarea {
+  display: block;
+  width: 768px;
+  margin: 0 auto;
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)http://foxtrot.priv/csm/trial_notifycation.html -->
+<html lang="en" ng-app="demoApp" class="ng-scope">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style type="text/css">
+    @charset "UTF-8";
+    [ng\:cloak],
+    [ng-cloak],
+    [data-ng-cloak],
+    [x-ng-cloak],
+    .ng-cloak,
+    .x-ng-cloak,
+    .ng-hide:not(.ng-hide-animate) {
+      display: none !important;
+    }
+
+    ng\:form {
+      display: block;
+    }
+
+    .ng-animate-shim {
+      visibility: hidden;
+    }
+
+    .ng-anchor {
+      position: absolute;
+    }
+  </style>
+
+  <title>Activation Email Generator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <link href="style.css" rel="stylesheet">
+
+
+</head>
+
+
+<body ng-controller="DemoController" class="ng-scope">
+  <div class="container">
+
+
+    <h1>Activation Email Generator</h1>
+    <form name="dataForm" submit="buildUI($event)" class="ng-pristine ng-valid ng-valid-email">
+
+
+      <div class="dataForm">
+        
+        <div class="col-md-6 form-group cust">
+          <span class="title">客户信息</span>
+          <div class="form-item">
+            <label>
+              <span>公司名:</span>
+              <input type="text" name="company" ng-model="data.company" autofocus="" class="ng-pristine ng-valid ng-empty ng-touched">
+            </label>
+          </div>
+          <div class="form-item">
+            <label>
+              <span>客户姓名:</span>
+              <input type="text" name="name" ng-model="data.name" autofocus="" class="ng-pristine ng-untouched ng-valid ng-empty">
+            </label>
+          </div>
+          <div class="form-item">
+            <label>
+              <span>域名:</span>
+              <input type="text" name="domain" ng-model="data.domain" class="ng-pristine ng-untouched ng-valid ng-empty">
+            </label>
+          </div>
+          <div class="form-item">
+            <label>
+              <span>邮箱:</span>
+              <input ng-class="{&#39;error&#39;: !dataForm.email.$valid}" type="email" name="email" ng-model="data.email"
+                class="ng-pristine ng-untouched ng-valid ng-empty ng-valid-email">
+            </label>
+          </div>
+          <!--div class="form-item">
+            <label><span>账号:</span> <input type="text" name="mobile" ng-model="data.mobile" /></label>
+          </div-->
+          <div class="form-item">
+            <label>
+              <span>密码:</span>
+              <input type="text" name="password" ng-model="data.password" class="ng-pristine ng-untouched ng-valid ng-empty">
+            </label>
+          </div>
+        </div>
+
+
+        <div class="col-md-6 form-group sell">
+          <span class="title">销售信息</span>
+          <div class="form-item">
+            <label>
+              <span>姓名:</span>
+              <input type="text" name="senderName" ng-model="data.sender_name" class="ng-pristine ng-untouched ng-valid ng-empty">
+            </label>
+          </div>
+          <div class="form-item">
+            <label>
+              <span>电话:</span>
+              <input type="text" name="senderMobile" ng-model="data.sender_mobile" class="ng-pristine ng-untouched ng-valid ng-empty">
+            </label>
+          </div>
+          <div class="form-item">
+            <label>
+              <span>邮箱:</span>
+              <input ng-class="{&#39;error&#39;: !dataForm.senderEmail.$valid}" type="email" name="senderEmail"
+                ng-model="data.sender_email" class="ng-pristine ng-untouched ng-valid ng-empty ng-valid-email">
+            </label>
+          </div>
+          <div class="form-item">
+            <label>
+              <span>职位:</span>
+              <input type="text" name="senderTitle" ng-model="data.sender_title" class="ng-pristine ng-untouched ng-valid ng-empty">
+            </label>
+          </div>
+        </div>
+      </div>
+    </form>
+
+
+
+    <div class="button">
+      <button type="button" ng-click="buildUI($event)">生成预览</button>
+    </div>
+
+
+    <div class="preview-result">
+
+    </div>
+
+
+    <div class="preview">
+      <button type="button" ng-click="buildEDMCode($event)">复制 &lt; HTML 代码 &gt;</button>
+      <div>主题：
+        <input type="text" style="width: 50%;margin: 20px 0;"  id="previewSubject" ng-model="previewSubject" value="">
+      </div>
+      <div>
+        <textarea name="code" style="width: 50%;margin: 20px 0;" id="previewCode" ng-model="previewCode" cols="30" rows="10" onclick="this.select()"
+          class="ng-binding"></textarea>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="./Activation Email Generator_files/angular.1.6.2.min.js"></script>
+  <script src="./Activation Email Generator_files/jquery.3.1.1.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
